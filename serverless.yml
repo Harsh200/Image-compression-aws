@@ -1,1 +1,12 @@
 service: compressed-image
+
+
+provider:
+  name: aws
+  runtime: python2.7
+  region: us-west-2
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: 'arn:aws:s3:::compressed-image/*';
