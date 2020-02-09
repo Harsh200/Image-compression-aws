@@ -16,3 +16,8 @@ Working
 
 The function must be invoked by  S3 triggering when any new image file is uploaded to some S3 bucket. after this the function compresses and resizes the image and save . one can easily configure the widths of the resized image and their destination bucket/subfolder.
 
+Requirements
+python3
+boto3
+PIL
+AWS Account and services like s3,lambda, Iam
