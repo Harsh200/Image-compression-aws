@@ -11,3 +11,8 @@ Its architecture is basically uploading an image in Amazon simple storage servic
 
 This project requires the python2.7 coding standards along with Yaml file and json.
 
+
+Working
+
+The function must be invoked by  S3 triggering when any new image file is uploaded to some S3 bucket. after this the function compresses and resizes the image and save . one can easily configure the widths of the resized image and their destination bucket/subfolder.
+
