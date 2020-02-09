@@ -10,3 +10,13 @@ provider:
       Action:
         - s3:*
       Resource: 'arn:aws:s3:::compressed-image/*';
+functions:
+  resize:
+    handler: handler.call
+    environment:
+      BUCKET: compressed-image
+      REGION: us-west-2
+    events:
+      - http:
+          path: /{size}/{image}
+          method: get
