@@ -1,5 +1,5 @@
 # Image-compression-aws
-This is an image compression project done implemented on Amazon Web Services using python
+This is an image compression project implemented on Amazon Web Services using python
 
 This project is basically about compressed an image which is uploaded in s3.
 
