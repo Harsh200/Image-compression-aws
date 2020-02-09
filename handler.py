@@ -51,3 +51,4 @@ def call(event, context):
             "location": result_url
         }
     }
+    return response
