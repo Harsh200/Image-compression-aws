@@ -20,3 +20,9 @@ functions:
       - http:
           path: /{size}/{image}
           method: get
+resources:
+  Resources:
+    ResizedImages:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: compressed-image
