@@ -26,3 +26,11 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: compressed-image
+plugins:
+  - serverless-s3-local
+  - serverless-offline
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: "non-linux"
