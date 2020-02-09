@@ -38,3 +38,16 @@ def resize_image(bucket_name, key, size):
     return resized_image_url(
         resized_key, bucket_name, os.environ["AWS_REGION"]
     )
+def call(event, context):
+    key = event["pathParameters"]["image"]
+    size = event["pathParameters"]["size"]
+
+    result_url = resize_image(os.environ["BUCKET"], key, size)
+
+    response = {
+        "statusCode": 301,
+        "body": "",
+        "headers": {
+            "location": result_url
+        }
+    }
