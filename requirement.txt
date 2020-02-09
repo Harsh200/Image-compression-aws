@@ -1,0 +1,8 @@
+node modules
+Pillow
+python modules
+json
+IAM
+S3
+Lambda
+zip
